@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://db3bvopudowj5"]
+
+[ext_resource type="Script" uid="uid://dt6sgmdw64es6" path="res://scripts/battle/skills_info.gd" id="1_78vju"]
+[ext_resource type="Texture2D" uid="uid://durgvnyaemgi5" path="res://assets/icons/skills.png" id="1_it2gh"]
+[ext_resource type="FontFile" uid="uid://bvj13byb8di4a" path="res://fonts/PixelOperator8.ttf" id="2_78vju"]
+[ext_resource type="FontFile" uid="uid://cq3r4m8de71di" path="res://fonts/PixelOperator8-Bold.ttf" id="3_wt2th"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12j5o"]
+atlas = ExtResource("1_it2gh")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_12j5o"]
+font = ExtResource("3_wt2th")
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_61ot5"]
+font = ExtResource("2_78vju")
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_pohj0"]
+font = ExtResource("3_wt2th")
+font_size = 10
+
+[node name="SkillsInfo" type="Control" unique_id=1910019125]
+y_sort_enabled = true
+layout_mode = 3
+anchor_right = 0.36200002
+anchor_bottom = 0.096
+offset_right = 0.95996094
+offset_bottom = 0.3199997
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+script = ExtResource("1_78vju")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1467347697]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SkillImage" type="TextureRect" parent="HBoxContainer" unique_id=378425622]
+z_index = 1
+custom_minimum_size = Vector2(50, 50)
+custom_maximum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_12j5o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SkillName" type="Label" parent="HBoxContainer" unique_id=1491835069]
+layout_mode = 2
+text = "[SKILL NAME]"
+label_settings = SubResource("LabelSettings_12j5o")
+
+[node name="SkillDescription" type="Label" parent="HBoxContainer" unique_id=1587782019]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "This skills does some stuff that the other skill does but its different because fuck"
+label_settings = SubResource("LabelSettings_61ot5")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SkillCost" type="Label" parent="HBoxContainer" unique_id=1658949838]
+layout_mode = 2
+size_flags_vertical = 1
+text = "COST 2MP"
+label_settings = SubResource("LabelSettings_pohj0")
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1501280023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

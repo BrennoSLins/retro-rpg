@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HeroData" format=3 uid="uid://c4ifpo8td22g3"]
+
+[ext_resource type="Script" uid="uid://b17wrxdg7mjbl" path="res://scripts/resources/hero_data.gd" id="1_tjx0o"]
+[ext_resource type="Script" uid="uid://bfl54pt607ekb" path="res://scripts/resources/skill_data.gd" id="2_gsfb6"]
+[ext_resource type="Texture2D" uid="uid://stnmg2pbi2k2" path="res://assets/sprites/characters/heroes/KattySpriteSheet.png" id="3_gsfb6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oknd"]
+atlas = ExtResource("3_gsfb6")
+region = Rect2(752, 320, 160, 160)
+
+[resource]
+script = ExtResource("1_tjx0o")
+name = "Katty"
+sprite = SubResource("AtlasTexture_0oknd")
+skills = Array[ExtResource("2_gsfb6")]([null])
+metadata/_custom_type_script = "uid://b17wrxdg7mjbl"

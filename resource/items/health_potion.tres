@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dwoulv3j2t3we"]
+
+[ext_resource type="Script" uid="uid://svei1ioii5yn" path="res://scripts/resources/item_data.gd" id="1_pfc8k"]
+[ext_resource type="Texture2D" uid="uid://c8llf3rp8a7od" path="res://assets/icons/potions.png" id="2_ixfsr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixfsr"]
+atlas = ExtResource("2_ixfsr")
+region = Rect2(0, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_pfc8k")
+name = "Poção de HP"
+description = "Uma poção de baixa eficiencia"
+sprite = SubResource("AtlasTexture_ixfsr")
+value = 10
+targettype = 4
+metadata/_custom_type_script = "uid://svei1ioii5yn"

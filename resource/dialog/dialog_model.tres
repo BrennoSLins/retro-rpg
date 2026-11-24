@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="DialogData" format=3 uid="uid://ckkpl61l56rva"]
+
+[ext_resource type="Script" uid="uid://dclbuktapev3b" path="res://scripts/resources/dialog_data.gd" id="1_vulhi"]
+
+[resource]
+script = ExtResource("1_vulhi")
+metadata/_custom_type_script = "uid://dclbuktapev3b"

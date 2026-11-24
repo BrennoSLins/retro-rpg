@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="HeroData" format=3 uid="uid://res50yns2mc7"]
+
+[ext_resource type="Script" uid="uid://b17wrxdg7mjbl" path="res://scripts/resources/hero_data.gd" id="1_82p0q"]
+[ext_resource type="Script" uid="uid://bfl54pt607ekb" path="res://scripts/resources/skill_data.gd" id="2_02exn"]
+[ext_resource type="Resource" uid="uid://e8k4srjya8in" path="res://resource/skills/normalattack.tres" id="3_kdeqf"]
+[ext_resource type="Texture2D" uid="uid://bk8chk2ax5yvk" path="res://assets/sprites/characters/heroes/ZagreusSpriteSheet.png" id="3_oltdg"]
+[ext_resource type="Resource" uid="uid://bdmsj75eb3kmt" path="res://resource/skills/fireball.tres" id="4_3k0pg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtr54"]
+atlas = ExtResource("3_oltdg")
+region = Rect2(1376, 304, 128, 160)
+
+[resource]
+script = ExtResource("1_82p0q")
+name = "Zagreus"
+sprite = SubResource("AtlasTexture_xtr54")
+basehp = 15.0
+basemp = 10.0
+attributes = {
+0: 1,
+1: 1,
+2: 5,
+3: 1,
+4: 1,
+5: 1
+}
+skills = Array[ExtResource("2_02exn")]([ExtResource("3_kdeqf"), ExtResource("4_3k0pg")])
+metadata/_custom_type_script = "uid://b17wrxdg7mjbl"

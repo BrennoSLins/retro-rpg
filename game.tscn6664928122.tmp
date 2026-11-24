@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bsv7eood14s0w"]
+
+[ext_resource type="Script" uid="uid://0hk84klss4q5" path="res://scripts/game_manager.gd" id="1_hve3p"]
+[ext_resource type="Script" uid="uid://dv0kcxwhoqdxc" path="res://scripts/autoload/signal_bus.gd" id="1_ryrav"]
+[ext_resource type="PackedScene" uid="uid://crdivkcccx0e2" path="res://scenes/battle_scene.tscn" id="2_7jktm"]
+[ext_resource type="PackedScene" uid="uid://qb6liduuhgrs" path="res://scenes/characters/player.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://cgatrwuk5ub7p" path="res://scenes/scene_selector.tscn" id="3_mfdv2"]
+[ext_resource type="PackedScene" uid="uid://b05xiiwte62rp" path="res://scenes/maps/nou_village.tscn" id="5_7jktm"]
+[ext_resource type="PackedScene" uid="uid://xj4kcm8m00ey" path="res://scenes/dialog_box.tscn" id="5_eow3j"]
+[ext_resource type="Script" uid="uid://5xju7ljxrjob" path="res://scripts/autoload/audio_manager.gd" id="6_j5wjh"]
+
+[node name="Game" type="Node" unique_id=1269291675]
+script = ExtResource("1_ryrav")
+
+[node name="GameManager" type="Node" parent="." unique_id=737224441]
+script = ExtResource("1_hve3p")
+battle_scene = ExtResource("2_7jktm")
+selector_scene = ExtResource("3_mfdv2")
+dialog_scene = ExtResource("5_eow3j")
+
+[node name="AudioManager" type="Node" parent="." unique_id=1923527267]
+script = ExtResource("6_j5wjh")
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="AudioManager" unique_id=1300956726]
+unique_name_in_owner = true
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="AudioManager" unique_id=1883716210]
+unique_name_in_owner = true
+
+[node name="Player" parent="." unique_id=1622035692 instance=ExtResource("3_feb5d")]
+unique_name_in_owner = true
+z_index = 5
+position = Vector2(-50, -70)
+
+[node name="World" type="Node" parent="." unique_id=510965228]
+unique_name_in_owner = true
+
+[node name="NouVillage" parent="World" unique_id=427651959 instance=ExtResource("5_7jktm")]
+overworld_audio = null
+combat_audio = null
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=92881883]

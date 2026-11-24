@@ -1,0 +1,455 @@
+[gd_scene format=3 uid="uid://cdjm4o5hwhokx"]
+
+[ext_resource type="Script" uid="uid://dm2j1kxh2h72x" path="res://scripts/attribute_upgrade_screen.gd" id="1_aqlrh"]
+[ext_resource type="Texture2D" uid="uid://ddcn2ravaen2x" path="res://assets/sprites/characters/heroes/RaphealMugshot.png" id="2_7u3dw"]
+[ext_resource type="FontFile" uid="uid://cq3r4m8de71di" path="res://fonts/PixelOperator8-Bold.ttf" id="3_rsvqu"]
+[ext_resource type="FontFile" uid="uid://bvj13byb8di4a" path="res://fonts/PixelOperator8.ttf" id="4_4jnm8"]
+[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/sunnysideworld.png" id="5_o3qah"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5wjh"]
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12j5o"]
+atlas = ExtResource("2_7u3dw")
+
+[sub_resource type="LabelSettings" id="LabelSettings_12j5o"]
+font = ExtResource("3_rsvqu")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_8o43n"]
+font = ExtResource("3_rsvqu")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_sahv2"]
+font = ExtResource("3_rsvqu")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_61ot5"]
+font = ExtResource("4_4jnm8")
+font_size = 30
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61ot5"]
+atlas = ExtResource("5_o3qah")
+region = Rect2(592, 752, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pohj0"]
+atlas = ExtResource("5_o3qah")
+region = Rect2(592, 768, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqlrh"]
+atlas = ExtResource("5_o3qah")
+region = Rect2(704, 768, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7u3dw"]
+atlas = ExtResource("5_o3qah")
+region = Rect2(688, 768, 16, 16)
+
+[node name="Attribute Upgrade Menu" type="Control" unique_id=736750332]
+layout_mode = 3
+anchor_left = 0.094000004
+anchor_top = 0.08400001
+anchor_right = 0.897
+anchor_bottom = 0.8880001
+offset_left = -0.480011
+offset_top = 0.27999115
+offset_right = 0.87109375
+offset_bottom = -0.040100098
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aqlrh")
+
+[node name="Panel" type="Panel" parent="." unique_id=1844968720]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j5wjh")
+
+[node name="MainContainer" type="VBoxContainer" parent="Panel" unique_id=209325582]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterContainer" type="HBoxContainer" parent="Panel/MainContainer" unique_id=1138857779]
+custom_minimum_size = Vector2(1424, 200)
+custom_maximum_size = Vector2(1424, 200)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CharacterImage" type="TextureRect" parent="Panel/MainContainer/CharacterContainer" unique_id=582399907]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("AtlasTexture_12j5o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CharacterInfoContainer" type="VBoxContainer" parent="Panel/MainContainer/CharacterContainer" unique_id=278130186]
+texture_filter = 1
+custom_minimum_size = Vector2(1000, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EmptySpace" type="Label" parent="Panel/MainContainer/CharacterContainer/CharacterInfoContainer" unique_id=1213892042]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_12j5o")
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="Panel/MainContainer/CharacterContainer/CharacterInfoContainer" unique_id=399078880]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "[NAME]"
+label_settings = SubResource("LabelSettings_12j5o")
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="Panel/MainContainer/CharacterContainer/CharacterInfoContainer" unique_id=1471848496]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "LEVEL: [VALUE]"
+label_settings = SubResource("LabelSettings_8o43n")
+vertical_alignment = 1
+
+[node name="AvailablePts" type="Label" parent="Panel/MainContainer/CharacterContainer/CharacterInfoContainer" unique_id=405101018]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Available Points : [VALUE]"
+label_settings = SubResource("LabelSettings_sahv2")
+vertical_alignment = 1
+
+[node name="AttributesContainer" type="VBoxContainer" parent="Panel/MainContainer" unique_id=1895351720]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StrContainer" type="HBoxContainer" parent="Panel/MainContainer/AttributesContainer" unique_id=919792888]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttributeName" type="Label" parent="Panel/MainContainer/AttributesContainer/StrContainer" unique_id=1356441189]
+custom_minimum_size = Vector2(308, 31)
+custom_maximum_size = Vector2(308, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Strength:"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="ActualValue" type="Label" parent="Panel/MainContainer/AttributesContainer/StrContainer" unique_id=704897974]
+custom_minimum_size = Vector2(254, 31)
+custom_maximum_size = Vector2(254, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[VALUE]"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="PlusValue" type="Label" parent="Panel/MainContainer/AttributesContainer/StrContainer" unique_id=2107398176]
+custom_minimum_size = Vector2(282, 31)
+custom_maximum_size = Vector2(282, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+0"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="StrIncreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/StrContainer" unique_id=1202000577 groups=["atrribute_up_button"]]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_61ot5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="StrDecreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/StrContainer" unique_id=899445716]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_pohj0")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="DefContainer" type="HBoxContainer" parent="Panel/MainContainer/AttributesContainer" unique_id=1289236054]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttributeName" type="Label" parent="Panel/MainContainer/AttributesContainer/DefContainer" unique_id=623979654]
+custom_minimum_size = Vector2(308, 31)
+custom_maximum_size = Vector2(308, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Defense:"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="ActualValue" type="Label" parent="Panel/MainContainer/AttributesContainer/DefContainer" unique_id=1480748609]
+custom_minimum_size = Vector2(254, 31)
+custom_maximum_size = Vector2(254, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[VALUE]"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="PlusValue" type="Label" parent="Panel/MainContainer/AttributesContainer/DefContainer" unique_id=1212707675]
+custom_minimum_size = Vector2(282, 31)
+custom_maximum_size = Vector2(282, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+0"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="DefIncreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/DefContainer" unique_id=4703397]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_61ot5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="DefDecreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/DefContainer" unique_id=1876846759]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_pohj0")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="IntContainer" type="HBoxContainer" parent="Panel/MainContainer/AttributesContainer" unique_id=298296502]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttributeName" type="Label" parent="Panel/MainContainer/AttributesContainer/IntContainer" unique_id=1453653138]
+custom_minimum_size = Vector2(308, 31)
+custom_maximum_size = Vector2(308, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Intelligence:"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="ActualValue" type="Label" parent="Panel/MainContainer/AttributesContainer/IntContainer" unique_id=920401222]
+custom_minimum_size = Vector2(254, 31)
+custom_maximum_size = Vector2(254, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[VALUE]"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="PlusValue" type="Label" parent="Panel/MainContainer/AttributesContainer/IntContainer" unique_id=896078488]
+custom_minimum_size = Vector2(282, 31)
+custom_maximum_size = Vector2(282, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+0"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="IntIncreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/IntContainer" unique_id=1674155931]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_61ot5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="IntDecreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/IntContainer" unique_id=1207387288]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_pohj0")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="AgiContainer" type="HBoxContainer" parent="Panel/MainContainer/AttributesContainer" unique_id=871772915]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttributeName" type="Label" parent="Panel/MainContainer/AttributesContainer/AgiContainer" unique_id=813041552]
+custom_minimum_size = Vector2(308, 31)
+custom_maximum_size = Vector2(308, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Agility:"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="ActualValue" type="Label" parent="Panel/MainContainer/AttributesContainer/AgiContainer" unique_id=2107786207]
+custom_minimum_size = Vector2(254, 31)
+custom_maximum_size = Vector2(254, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[VALUE]"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="PlusValue" type="Label" parent="Panel/MainContainer/AttributesContainer/AgiContainer" unique_id=1484894446]
+custom_minimum_size = Vector2(282, 31)
+custom_maximum_size = Vector2(282, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+0"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="AgiIncreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/AgiContainer" unique_id=1462730663]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_61ot5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="AgiDecreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/AgiContainer" unique_id=2026822258]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_pohj0")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ConContainer" type="HBoxContainer" parent="Panel/MainContainer/AttributesContainer" unique_id=418625541]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttributeName" type="Label" parent="Panel/MainContainer/AttributesContainer/ConContainer" unique_id=1720809729]
+custom_minimum_size = Vector2(308, 31)
+custom_maximum_size = Vector2(308, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Constitution:"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="ActualValue" type="Label" parent="Panel/MainContainer/AttributesContainer/ConContainer" unique_id=2073284116]
+custom_minimum_size = Vector2(254, 31)
+custom_maximum_size = Vector2(254, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[VALUE]"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="PlusValue" type="Label" parent="Panel/MainContainer/AttributesContainer/ConContainer" unique_id=1398271594]
+custom_minimum_size = Vector2(282, 31)
+custom_maximum_size = Vector2(282, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+0"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="ConIncreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/ConContainer" unique_id=1461515715]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_61ot5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ConDecreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/ConContainer" unique_id=1399184720]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_pohj0")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="DexContainer" type="HBoxContainer" parent="Panel/MainContainer/AttributesContainer" unique_id=1471518551]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AttributeName" type="Label" parent="Panel/MainContainer/AttributesContainer/DexContainer" unique_id=810781863]
+custom_minimum_size = Vector2(308, 31)
+custom_maximum_size = Vector2(308, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Dexterity:"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="ActualValue" type="Label" parent="Panel/MainContainer/AttributesContainer/DexContainer" unique_id=581486971]
+custom_minimum_size = Vector2(254, 31)
+custom_maximum_size = Vector2(254, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "[VALUE]"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="PlusValue" type="Label" parent="Panel/MainContainer/AttributesContainer/DexContainer" unique_id=504288466]
+custom_minimum_size = Vector2(282, 31)
+custom_maximum_size = Vector2(282, 31)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+0"
+label_settings = SubResource("LabelSettings_61ot5")
+horizontal_alignment = 1
+
+[node name="DexIncreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/DexContainer" unique_id=1170144326]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_61ot5")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="DexDecreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/DexContainer" unique_id=1034216370]
+custom_minimum_size = Vector2(282, 96)
+custom_maximum_size = Vector2(282, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_pohj0")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ConfirmCancelContainer" type="HBoxContainer" parent="Panel/MainContainer/AttributesContainer" unique_id=1093431816]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Confirm" type="Button" parent="Panel/MainContainer/AttributesContainer/ConfirmCancelContainer" unique_id=264197243]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_aqlrh")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Cancel" type="Button" parent="Panel/MainContainer/AttributesContainer/ConfirmCancelContainer" unique_id=62801501]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = SubResource("AtlasTexture_7u3dw")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Panel/MainContainer/AttributesContainer/ConfirmCancelContainer/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="Panel/MainContainer/AttributesContainer/ConfirmCancelContainer/Cancel" to="." method="_on_cancel_pressed"]

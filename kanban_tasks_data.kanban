@@ -1,0 +1,181 @@
+{
+	"categories": [
+		{
+			"uuid": "69724394-8e1f-435a-9340-49ac80352512",
+			"title": "Task",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "4dc22a81-8317-43c3-9291-452a979ccd19",
+			"title": "Todo",
+			"tasks": [
+				"6ad7af41-944b-403e-9f00-2619bda10781",
+				"ea8d78dc-f41a-4ae6-a631-fb8a1abc1026",
+				"f9d6e991-1e21-4219-a47b-2201e3739ced",
+				"750d03b9-250e-4efe-b056-4a188faedbb8"
+			]
+		},
+		{
+			"uuid": "07236846-b14e-4a2e-8485-64953ea319cf",
+			"title": "Doing",
+			"tasks": [
+				"84c14afa-fe7f-4fbc-aabb-ae65f0c2f845"
+			]
+		},
+		{
+			"uuid": "874a73e2-5cb9-4439-b7ff-dc4a48ccc587",
+			"title": "Done",
+			"tasks": [
+				"0a46007f-59b2-4c1b-b6de-2d86a2506f78",
+				"a9389b4b-6c6d-43c6-9dd9-af273741db55"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "6ad7af41-944b-403e-9f00-2619bda10781",
+			"title": "UI",
+			"description": "",
+			"category": "69724394-8e1f-435a-9340-49ac80352512",
+			"steps": [
+				{
+					"details": "Fix buttons response",
+					"done": false
+				},
+				{
+					"details": "Main menu",
+					"done": false
+				},
+				{
+					"details": "Improve route select screen",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "f9d6e991-1e21-4219-a47b-2201e3739ced",
+			"title": "Combat system",
+			"description": "",
+			"category": "69724394-8e1f-435a-9340-49ac80352512",
+			"steps": [
+				{
+					"details": "Guard functionality",
+					"done": false
+				},
+				{
+					"details": "Better skills",
+					"done": false
+				},
+				{
+					"details": "Fix button locks",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "84c14afa-fe7f-4fbc-aabb-ae65f0c2f845",
+			"title": "Item system",
+			"description": "",
+			"category": "69724394-8e1f-435a-9340-49ac80352512",
+			"steps": [
+				{
+					"details": "Fix items",
+					"done": false
+				},
+				{
+					"details": "Basic combat items\n",
+					"done": false
+				},
+				{
+					"details": "Key-items",
+					"done": false
+				},
+				{
+					"details": "Crafting items",
+					"done": false
+				},
+				{
+					"details": "Attack items",
+					"done": false
+				},
+				{
+					"details": "Buff items",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "750d03b9-250e-4efe-b056-4a188faedbb8",
+			"title": "Character system",
+			"description": "",
+			"category": "69724394-8e1f-435a-9340-49ac80352512",
+			"steps": [
+				{
+					"details": "More stats",
+					"done": true
+				},
+				{
+					"details": "Buff/debuff system",
+					"done": false
+				},
+				{
+					"details": "Level system",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "ea8d78dc-f41a-4ae6-a631-fb8a1abc1026",
+			"title": "Camp",
+			"description": "",
+			"category": "69724394-8e1f-435a-9340-49ac80352512",
+			"steps": [
+				{
+					"details": "Draw camp map",
+					"done": true
+				},
+				{
+					"details": "Levelling\n\n",
+					"done": false
+				},
+				{
+					"details": "Crafting",
+					"done": false
+				},
+				{
+					"details": "Social links",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "0a46007f-59b2-4c1b-b6de-2d86a2506f78",
+			"title": "Complete item basic funcionaliy",
+			"description": "",
+			"category": "69724394-8e1f-435a-9340-49ac80352512",
+			"steps": []
+		},
+		{
+			"uuid": "a9389b4b-6c6d-43c6-9dd9-af273741db55",
+			"title": "UI: Improving select route",
+			"description": "",
+			"category": "69724394-8e1f-435a-9340-49ac80352512",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"4dc22a81-8317-43c3-9291-452a979ccd19"
+			],
+			[
+				"07236846-b14e-4a2e-8485-64953ea319cf"
+			],
+			[
+				"874a73e2-5cb9-4439-b7ff-dc4a48ccc587"
+			]
+		]
+	}
+}

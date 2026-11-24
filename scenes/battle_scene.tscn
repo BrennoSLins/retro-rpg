@@ -1,0 +1,256 @@
+[gd_scene format=3 uid="uid://crdivkcccx0e2"]
+
+[ext_resource type="Script" uid="uid://c5241x6fw6hpm" path="res://scripts/battle/battle_scene.gd" id="1_rca61"]
+[ext_resource type="PackedScene" uid="uid://wao8ltwmss7v" path="res://scenes/battle_unit.tscn" id="2_8qdv8"]
+[ext_resource type="Texture2D" uid="uid://bu60c31v2icxk" path="res://assets/backgrounds/2304x1296.png" id="3_1i8jf"]
+[ext_resource type="FontFile" uid="uid://bvj13byb8di4a" path="res://fonts/PixelOperator8.ttf" id="3_pxwbd"]
+[ext_resource type="PackedScene" uid="uid://db3bvopudowj5" path="res://scenes/skills_info.tscn" id="4_0gp0h"]
+[ext_resource type="Texture2D" uid="uid://bmsqu2fkyuoru" path="res://assets/backgrounds/grassroad.png" id="4_svpld"]
+[ext_resource type="PackedScene" uid="uid://lpclr0c0pp2a" path="res://scenes/battle_info.tscn" id="6_1i8jf"]
+[ext_resource type="Texture2D" uid="uid://durgvnyaemgi5" path="res://assets/icons/skills.png" id="6_rum4d"]
+[ext_resource type="Texture2D" uid="uid://c8llf3rp8a7od" path="res://assets/icons/potions.png" id="7_3oc74"]
+[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/sunnysideworld.png" id="8_0gp0h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61ot5"]
+bg_color = Color(0.17641911, 0.17641908, 0.17641908, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_12j5o"]
+font = ExtResource("3_pxwbd")
+
+[sub_resource type="Theme" id="Theme_12j5o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxwbd"]
+atlas = ExtResource("6_rum4d")
+region = Rect2(160, 256, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1i8jf"]
+atlas = ExtResource("6_rum4d")
+region = Rect2(32, 320, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svpld"]
+atlas = ExtResource("6_rum4d")
+region = Rect2(0, 288, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rum4d"]
+atlas = ExtResource("7_3oc74")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oc74"]
+atlas = ExtResource("8_0gp0h")
+region = Rect2(624, 720, 16, 16)
+
+[node name="BattleScene" type="Control" unique_id=1682226388]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rca61")
+battle_unit_scene = ExtResource("2_8qdv8")
+party_info_scene = ExtResource("6_1i8jf")
+skill_info_scene = ExtResource("4_0gp0h")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=160366471]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2952579, 0.42940933, 1, 1)
+
+[node name="Road" type="TextureRect" parent="." unique_id=1214993083]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5361111
+anchor_right = 1.0005208
+anchor_bottom = 0.7814815
+grow_horizontal = 2
+texture = ExtResource("4_svpld")
+expand_mode = 1
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="BattleLayout" type="VBoxContainer" parent="." unique_id=1662856053]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.781
+offset_bottom = 0.5199585
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="BackGround" type="TextureRect" parent="BattleLayout" unique_id=991249034]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_1i8jf")
+expand_mode = 1
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="BattleArea" type="HBoxContainer" parent="BattleLayout" unique_id=27585288]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerContainer" type="HBoxContainer" parent="BattleLayout/BattleArea" unique_id=1853612606]
+layout_mode = 2
+size_flags_horizontal = 3
+layout_direction = 3
+theme_override_constants/separation = 90
+alignment = 1
+
+[node name="EnemyContainer" type="HBoxContainer" parent="BattleLayout/BattleArea" unique_id=576013694]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="TextContainer" type="PanelContainer" parent="." unique_id=629856014]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104
+anchor_top = 0.781
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 764.32
+offset_top = 0.5199585
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_61ot5")
+
+[node name="MainText" type="Label" parent="TextContainer" unique_id=437930856]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "A wild [enemy] appears!"
+label_settings = SubResource("LabelSettings_12j5o")
+horizontal_alignment = 1
+
+[node name="PartyInfoContainer" type="PanelContainer" parent="." unique_id=400070619]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104
+anchor_top = 0.781
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.3199921
+offset_top = 0.5199585
+offset_right = -952.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_61ot5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PartyInfoContainer" unique_id=1794507186]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="ActionInfoContainer" type="PanelContainer" parent="." unique_id=1082069101]
+visible = false
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.104
+anchor_top = 0.781
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.3199921
+offset_top = 0.5199585
+offset_right = -952.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_61ot5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ActionInfoContainer" unique_id=1650684728]
+custom_minimum_size = Vector2(750, 0)
+custom_maximum_size = Vector2(750, -1)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 55
+
+[node name="ButtonsContainer" type="PanelContainer" parent="." unique_id=511034169]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.781
+anchor_right = 0.106000006
+anchor_bottom = 1.001
+offset_top = 0.5199585
+offset_right = -0.52001953
+offset_bottom = -0.080078125
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_61ot5")
+
+[node name="Action buttons" type="VBoxContainer" parent="ButtonsContainer" unique_id=1347026126]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_12j5o")
+alignment = 1
+
+[node name="AttackButton" type="Button" parent="ButtonsContainer/Action buttons" unique_id=497170721]
+process_mode = 3
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Attack
+"
+icon = SubResource("AtlasTexture_pxwbd")
+expand_icon = true
+
+[node name="GuardButton" type="Button" parent="ButtonsContainer/Action buttons" unique_id=1787200299]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Guard"
+icon = SubResource("AtlasTexture_1i8jf")
+expand_icon = true
+
+[node name="FocusButton" type="Button" parent="ButtonsContainer/Action buttons" unique_id=477418561]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Focus"
+icon = SubResource("AtlasTexture_svpld")
+expand_icon = true
+
+[node name="ItemButton" type="Button" parent="ButtonsContainer/Action buttons" unique_id=1471032456]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Items"
+icon = SubResource("AtlasTexture_rum4d")
+expand_icon = true
+
+[node name="RunButton" type="Button" parent="ButtonsContainer/Action buttons" unique_id=1207253714]
+process_mode = 3
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Run"
+icon = SubResource("AtlasTexture_3oc74")
+expand_icon = true
+
+[connection signal="pressed" from="ButtonsContainer/Action buttons/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="pressed" from="ButtonsContainer/Action buttons/GuardButton" to="." method="_on_guard_button_pressed"]
+[connection signal="pressed" from="ButtonsContainer/Action buttons/FocusButton" to="." method="_on_focus_button_pressed"]
+[connection signal="pressed" from="ButtonsContainer/Action buttons/ItemButton" to="." method="_on_item_button_pressed"]
+[connection signal="pressed" from="ButtonsContainer/Action buttons/RunButton" to="." method="_on_run_button_pressed"]

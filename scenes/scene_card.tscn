@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bajnpffq76d2i"]
+
+[ext_resource type="Script" uid="uid://dfdv6ankgnfwx" path="res://scripts/scenario/scene_card.gd" id="1_j7fob"]
+[ext_resource type="Texture2D" uid="uid://ddcn2ravaen2x" path="res://assets/sprites/characters/heroes/RaphealMugshot.png" id="2_f8o0n"]
+[ext_resource type="Texture2D" uid="uid://b68xri1bi62ck" path="res://assets/UI/Fantasy UI/Default/Border/panel-border-000.png" id="3_ontmp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftswq"]
+atlas = ExtResource("2_f8o0n")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61ot5"]
+atlas = ExtResource("3_ontmp")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61ot5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pohj0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ftswq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1n7pi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47lvx"]
+
+[node name="ScenarioCard" type="Control" unique_id=1715919415]
+process_mode = 3
+y_sort_enabled = true
+layout_mode = 3
+anchor_right = 0.328
+anchor_bottom = 1.0
+offset_right = 0.23999023
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_j7fob")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=540147592]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Image" type="TextureRect" parent="VBoxContainer" unique_id=1203890154]
+layout_mode = 2
+size_flags_vertical = 3
+texture = SubResource("AtlasTexture_ftswq")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="NameDesc" type="Label" parent="VBoxContainer" unique_id=1928439802]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SelectedColor" type="ColorRect" parent="." unique_id=1953571353]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.16489995, 0.58896166, 0.37132025, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="SelectedColor" unique_id=634374995]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_61ot5")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Button" type="Button" parent="." unique_id=2114491170]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_61ot5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pohj0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ftswq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_1n7pi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_47lvx")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

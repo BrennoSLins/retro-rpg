@@ -1,0 +1,14 @@
+extends Area2D
+
+
+########## OBSOLETE ####################
+
+@onready var interactable: Area2D = $Interactable
+
+
+func _ready() -> void:
+	interactable.interact = _on_interact
+
+func _on_interact():
+		
+	SignalBus.scenario_screen.emit()

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://e8k4srjya8in"]
+
+[ext_resource type="Script" uid="uid://bfl54pt607ekb" path="res://scripts/resources/skill_data.gd" id="1_cb7rn"]
+[ext_resource type="Texture2D" uid="uid://4trkj4r0msbb" path="res://assets/icons/weaponsandpotions.png" id="2_cb7rn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00ngv"]
+atlas = ExtResource("2_cb7rn")
+region = Rect2(128, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_cb7rn")
+name = "Normal Attack"
+description = "Um ataque normal com sua arma."
+sprite = SubResource("AtlasTexture_00ngv")
+dmg_multiplier = 1.0
+metadata/_custom_type_script = "uid://bfl54pt607ekb"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://qw5xy8htnr35"]
+
+[ext_resource type="Script" uid="uid://svei1ioii5yn" path="res://scripts/resources/item_data.gd" id="1_0vk6x"]
+[ext_resource type="Texture2D" uid="uid://dityuxqade4nj" path="res://assets/sprites/tilemap_packed Desert.png" id="2_bxid0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxid0"]
+atlas = ExtResource("2_bxid0")
+region = Rect2(48, 176, 16, 16)
+
+[resource]
+script = ExtResource("1_0vk6x")
+name = "Chave Gosmenta"
+description = "Uma chave encontrada dentro de um slime."
+sprite = SubResource("AtlasTexture_bxid0")
+itemtype = 2
+metadata/_custom_type_script = "uid://svei1ioii5yn"

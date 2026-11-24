@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dcpqe755iqqq6"]
+
+[ext_resource type="Script" uid="uid://cduqbfw6wbge7" path="res://scripts/resources/enemy_data.gd" id="1_wjcqv"]
+[ext_resource type="Texture2D" uid="uid://b8ntv5xgqj86v" path="res://assets/sprites/tilemap_packed Dungeon.png" id="2_ksrc1"]
+[ext_resource type="Script" uid="uid://bfl54pt607ekb" path="res://scripts/resources/skill_data.gd" id="2_okki7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksrc1"]
+atlas = ExtResource("2_ksrc1")
+region = Rect2(16, 144, 16, 16)
+
+[resource]
+script = ExtResource("1_wjcqv")
+name = "Orc"
+sprite = SubResource("AtlasTexture_ksrc1")
+metadata/_custom_type_script = "uid://cduqbfw6wbge7"

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="HeroData" format=3 uid="uid://csg83k2bqwaot"]
+
+[ext_resource type="Script" uid="uid://b17wrxdg7mjbl" path="res://scripts/resources/hero_data.gd" id="1_7dfwk"]
+[ext_resource type="Script" uid="uid://bfl54pt607ekb" path="res://scripts/resources/skill_data.gd" id="2_xlifn"]
+[ext_resource type="Resource" uid="uid://e8k4srjya8in" path="res://resource/skills/normalattack.tres" id="3_llhua"]
+[ext_resource type="Texture2D" uid="uid://ch6540gfuu7tb" path="res://assets/sprites/characters/heroes/LinkySpriteSheet.png" id="4_7dfwk"]
+[ext_resource type="Resource" uid="uid://bvth6x20an7mi" path="res://resource/skills/heal.tres" id="4_xlifn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahtgr"]
+atlas = ExtResource("4_7dfwk")
+region = Rect2(736, 320, 128, 160)
+
+[resource]
+script = ExtResource("1_7dfwk")
+name = "Linky"
+sprite = SubResource("AtlasTexture_ahtgr")
+basehp = 10.0
+basemp = 20.0
+attributes = {
+0: 1,
+1: 1,
+2: 3,
+3: 1,
+4: 1,
+5: 1
+}
+skills = Array[ExtResource("2_xlifn")]([ExtResource("3_llhua"), ExtResource("4_xlifn")])
+metadata/_custom_type_script = "uid://b17wrxdg7mjbl"

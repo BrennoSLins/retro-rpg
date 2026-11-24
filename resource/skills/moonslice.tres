@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dv04bkn20doqe"]
+
+[ext_resource type="Script" uid="uid://bfl54pt607ekb" path="res://scripts/resources/skill_data.gd" id="1_df17g"]
+[ext_resource type="Texture2D" uid="uid://durgvnyaemgi5" path="res://assets/icons/skills.png" id="2_h8w6v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8w6v"]
+atlas = ExtResource("2_h8w6v")
+region = Rect2(48, 416, 16, 16)
+
+[resource]
+script = ExtResource("1_df17g")
+name = "Moon Slice"
+description = "Concentre sua mana e dispare um corte em formato de lua."
+sprite = SubResource("AtlasTexture_h8w6v")
+dmg_multiplier = 1.5
+mp_cost = 2
+metadata/_custom_type_script = "uid://bfl54pt607ekb"

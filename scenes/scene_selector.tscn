@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cgatrwuk5ub7p"]
+
+[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/sunnysideworld.png" id="1_8mcj1"]
+[ext_resource type="Script" uid="uid://4lp5gr77sojk" path="res://scripts/scenario/scene_selector.gd" id="1_68tw3"]
+[ext_resource type="PackedScene" uid="uid://bajnpffq76d2i" path="res://scenes/scene_card.tscn" id="2_xmlk4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12j5o"]
+atlas = ExtResource("1_8mcj1")
+region = Rect2(704, 768, 16, 16)
+
+[node name="ScenarioSelector" type="Control" unique_id=2129750469]
+process_mode = 3
+y_sort_enabled = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_68tw3")
+route_card = ExtResource("2_xmlk4")
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=1102430332]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RouteCards" type="HBoxContainer" parent="MainLayout" unique_id=2033187478]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ConfirmButton" type="Button" parent="." unique_id=1943002506]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.90700006
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.4399414
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+icon = SubResource("AtlasTexture_12j5o")
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="ConfirmButton" to="." method="_on_confirm_button_pressed"]
