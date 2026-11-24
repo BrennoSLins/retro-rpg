@@ -29,10 +29,10 @@ func _on_interact():
 	
 	# Doesnt add to inventory if its trash
 	if item_found.name == "Trash":
-		interactable.interact_name = "looted_box"
+		#interactable.interact_name = "looted_box"
 		return
 	
-	interactable.interact_name = "looted_box"
+	##interactable.interact_name = "looted_box"
 	Player.inventory.append(item_found)
 	
 	

@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://cqru47pu6oy7p"]
 
+[ext_resource type="Script" uid="uid://svei1ioii5yn" path="res://scripts/resources/item_data.gd" id="1_0t6mh"]
 [ext_resource type="Script" uid="uid://cduqbfw6wbge7" path="res://scripts/resources/enemy_data.gd" id="1_22sms"]
 [ext_resource type="Script" uid="uid://bfl54pt607ekb" path="res://scripts/resources/skill_data.gd" id="2_hhpj0"]
 [ext_resource type="Resource" uid="uid://e8k4srjya8in" path="res://resource/skills/normalattack.tres" id="3_0t6mh"]
@@ -13,7 +14,7 @@ region = Rect2(208, 64, 752, 1072)
 script = ExtResource("1_22sms")
 name = "Bandit"
 sprite = SubResource("AtlasTexture_f3ewn")
-basehp = 30.0
+basehp = 10.0
 basemp = 10.0
 attributes = {
 0: 3,

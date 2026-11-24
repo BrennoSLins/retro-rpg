@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://co0kn8fgvsjud"]
+
+[ext_resource type="Script" uid="uid://svei1ioii5yn" path="res://scripts/resources/item_data.gd" id="1_xeoeh"]
+[ext_resource type="Texture2D" uid="uid://cn3jnva5fbini" path="res://assets/icons/equipment.png" id="2_ghwh6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghwh6"]
+atlas = ExtResource("2_ghwh6")
+region = Rect2(240, 32, 16, 16)
+
+[resource]
+script = ExtResource("1_xeoeh")
+name = "Joia de Fogo"
+description = "Uma joia volátil que explode quando muita força é inserida nela."
+sprite = SubResource("AtlasTexture_ghwh6")
+itemtype = 1
+value = 15
+targettype = 1
+metadata/_custom_type_script = "uid://svei1ioii5yn"

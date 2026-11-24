@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://83pygf6yje6n"
-path="res://.godot/imported/sunnysideworld.png-6cc7900edf05bf33af06136ab406e89e.ctex"
+uid="uid://bnirmn0aeqlos"
+path="res://.godot/imported/desertroad.jpg-6d9fc2603182506575cef0dd264896f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sunnysideworld.png"
-dest_files=["res://.godot/imported/sunnysideworld.png-6cc7900edf05bf33af06136ab406e89e.ctex"]
+source_file="res://assets/backgrounds/combatbg/stickycave/desertroad.jpg"
+dest_files=["res://.godot/imported/desertroad.jpg-6d9fc2603182506575cef0dd264896f9.ctex"]
 
 [params]
 

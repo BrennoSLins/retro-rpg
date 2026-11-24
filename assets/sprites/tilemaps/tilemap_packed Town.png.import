@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1oorhn263idc"
-path="res://.godot/imported/tilemap Tiny Battle.png-a49ea1f6ed04c5699b882fdf1b4925d9.ctex"
+uid="uid://dolxdl11vtamt"
+path="res://.godot/imported/tilemap_packed Town.png-cbe67cbce3acb7bd816fc004a4ecb31d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilemap Tiny Battle.png"
-dest_files=["res://.godot/imported/tilemap Tiny Battle.png-a49ea1f6ed04c5699b882fdf1b4925d9.ctex"]
+source_file="res://assets/sprites/tilemaps/tilemap_packed Town.png"
+dest_files=["res://.godot/imported/tilemap_packed Town.png-cbe67cbce3acb7bd816fc004a4ecb31d.ctex"]
 
 [params]
 

@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://qb6liduuhgrs"]
 
-[ext_resource type="Texture2D" uid="uid://b8ntv5xgqj86v" path="res://assets/sprites/tilemap_packed Dungeon.png" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://b8ntv5xgqj86v" path="res://assets/sprites/tilemaps/tilemap_packed Dungeon.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://gni7utmxuj6r" path="res://scripts/player.gd" id="1_yewv4"]
+[ext_resource type="Script" uid="uid://svei1ioii5yn" path="res://scripts/resources/item_data.gd" id="2_kqtwu"]
+[ext_resource type="Resource" uid="uid://dwoulv3j2t3we" path="res://resource/items/health_potion.tres" id="3_6eyoc"]
 [ext_resource type="PackedScene" uid="uid://cvxatlc2iypi8" path="res://scenes/interactables/interactable_component.tscn" id="3_76oj4"]
+[ext_resource type="Resource" uid="uid://co0kn8fgvsjud" path="res://resource/items/combat items/bomb.tres" id="4_eojnx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -32,6 +35,7 @@ z_index = 2
 collision_layer = 9
 collision_mask = 9
 script = ExtResource("1_yewv4")
+inventory = Array[ExtResource("2_kqtwu")]([ExtResource("3_6eyoc"), ExtResource("4_eojnx")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1884675630]
 sprite_frames = SubResource("SpriteFrames_12j5o")

@@ -7,8 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://uphx5tp7ajer" path="res://assets/sprites/characters/heroes/RaphealSpriteSheet.png" id="3_wnsuw"]
 [ext_resource type="Resource" uid="uid://dv04bkn20doqe" path="res://resource/skills/moonslice.tres" id="4_tlaph"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aqlrh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vajjd"]
 atlas = ExtResource("1_y6shx")
+region = Rect2(96, 0, 1216, 1122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5xum"]
 atlas = ExtResource("3_wnsuw")
@@ -18,7 +19,7 @@ region = Rect2(736, 304, 128, 160)
 script = ExtResource("1_nmexe")
 name = "Rapheal"
 sprite = SubResource("AtlasTexture_w5xum")
-mugshot = SubResource("AtlasTexture_aqlrh")
+mugshot = SubResource("AtlasTexture_vajjd")
 basehp = 20.0
 basemp = 5.0
 attributes = {

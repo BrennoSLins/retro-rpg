@@ -12,6 +12,7 @@
 			"title": "Todo",
 			"tasks": [
 				"6ad7af41-944b-403e-9f00-2619bda10781",
+				"84c14afa-fe7f-4fbc-aabb-ae65f0c2f845",
 				"ea8d78dc-f41a-4ae6-a631-fb8a1abc1026",
 				"f9d6e991-1e21-4219-a47b-2201e3739ced",
 				"750d03b9-250e-4efe-b056-4a188faedbb8"
@@ -21,7 +22,7 @@
 			"uuid": "07236846-b14e-4a2e-8485-64953ea319cf",
 			"title": "Doing",
 			"tasks": [
-				"84c14afa-fe7f-4fbc-aabb-ae65f0c2f845"
+				"72f5fc23-d160-4f1d-9a02-866dd443ef7e"
 			]
 		},
 		{
@@ -42,7 +43,7 @@
 			"steps": [
 				{
 					"details": "Fix buttons response",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Main menu",
@@ -82,23 +83,23 @@
 			"steps": [
 				{
 					"details": "Fix items",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Basic combat items\n",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Key-items",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Crafting items",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Attack items",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Buff items",
@@ -160,6 +161,13 @@
 		{
 			"uuid": "a9389b4b-6c6d-43c6-9dd9-af273741db55",
 			"title": "UI: Improving select route",
+			"description": "",
+			"category": "69724394-8e1f-435a-9340-49ac80352512",
+			"steps": []
+		},
+		{
+			"uuid": "72f5fc23-d160-4f1d-9a02-866dd443ef7e",
+			"title": "Finish Sticky Caves (again)",
 			"description": "",
 			"category": "69724394-8e1f-435a-9340-49ac80352512",
 			"steps": []

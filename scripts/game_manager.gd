@@ -62,7 +62,7 @@ func select_route():
 	# Add it to the screen. (Inside the CanvasLayer)
 	ui_layer.add_child(selector_scene)
 	
-	SignalBus.player_visibility.emit(false)
+	Player.visible = false
 	
 
 func dialog_show(data: Array[DialogData]):
@@ -87,6 +87,6 @@ func attribute_upgrade_show(hero: HeroData):
 	# Passes data to scene
 	scene.set_data(hero)
 	
-	SignalBus.player_visibility.emit(false)
+	Player.visible = false
 	
 	

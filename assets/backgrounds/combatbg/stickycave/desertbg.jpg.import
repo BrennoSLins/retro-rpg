@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdpjeub66r8hb"
-path="res://.godot/imported/TILESET VILLAGE TOP DOWN.png-08945ad58f800e7ccf907331e575bdf8.ctex"
+uid="uid://c3g8h7gaphmit"
+path="res://.godot/imported/desertbg.jpg-58a5fe9d3083f9ab1a08e5daf22d39be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/TILESET VILLAGE TOP DOWN.png"
-dest_files=["res://.godot/imported/TILESET VILLAGE TOP DOWN.png-08945ad58f800e7ccf907331e575bdf8.ctex"]
+source_file="res://assets/backgrounds/combatbg/stickycave/desertbg.jpg"
+dest_files=["res://.godot/imported/desertbg.jpg-58a5fe9d3083f9ab1a08e5daf22d39be.ctex"]
 
 [params]
 

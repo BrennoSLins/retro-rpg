@@ -21,18 +21,24 @@ font_size = 8
 font = ExtResource("3_wt2th")
 font_size = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pu18s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rghmr"]
+bg_color = Color(0.6, 0.6, 0.6, 0.62352943)
+
 [node name="SkillsInfo" type="Control" unique_id=1910019125]
 y_sort_enabled = true
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 3
 anchor_right = 0.36200002
-anchor_bottom = 0.096
+anchor_bottom = 0.044000003
 offset_right = 0.95996094
-offset_bottom = 0.3199997
+offset_bottom = 0.47999573
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource("1_78vju")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1467347697]
@@ -44,6 +50,7 @@ offset_left = -1.0
 offset_right = 6.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="SkillImage" type="TextureRect" parent="HBoxContainer" unique_id=378425622]
 z_index = 1
@@ -52,16 +59,19 @@ custom_maximum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+mouse_filter = 2
 texture = SubResource("AtlasTexture_12j5o")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="SkillName" type="Label" parent="HBoxContainer" unique_id=1491835069]
+z_index = 1
 layout_mode = 2
 text = "[SKILL NAME]"
 label_settings = SubResource("LabelSettings_12j5o")
 
 [node name="SkillDescription" type="Label" parent="HBoxContainer" unique_id=1587782019]
+z_index = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -71,6 +81,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="SkillCost" type="Label" parent="HBoxContainer" unique_id=1658949838]
+z_index = 1
 layout_mode = 2
 size_flags_vertical = 1
 text = "COST 2MP"
@@ -84,6 +95,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-flat = true
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pu18s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rghmr")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

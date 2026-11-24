@@ -17,6 +17,7 @@ var active_enemy_units : Array = []
 var current_hero_index : int = 0
 var is_targeting : bool = false
 
+
 # Buttons
 @onready var attack_button: Button = $"ButtonsContainer/Action buttons/AttackButton"
 @onready var run_button: Button = $"ButtonsContainer/Action buttons/RunButton"
@@ -122,6 +123,11 @@ func start_player_turn():
 		enemy_phase() # All heroes acted
 		return
 	
+	# Check if enemies are alive
+	if active_enemy_units.size() <= 0:
+		win_battle()
+		return
+	
 	# Reset UI
 	attack_button.disabled = false
 	is_targeting = false
@@ -164,16 +170,16 @@ func _on_attack_button_pressed() -> void:
 
 
 func _on_skill_selected(skill_data: SkillData):
-	active_hero_units[current_hero_index].selectedskill = skill_data
+	active_hero_units[current_hero_index].selected_action = skill_data
 	is_targeting = true
 	main_text.text = "Using " + skill_data.name + ". Select target"
 	
 
 func _on_hero_selected(hero_unit):
-	if not active_hero_units[current_hero_index].selectedskill.target_type == 2:
-		return
-	
 	if is_targeting:
+		if not active_hero_units[current_hero_index].selected_action.target_type == 2:
+			return
+			
 		is_targeting = false
 		
 	# Resets action info container to party info
@@ -183,18 +189,18 @@ func _on_hero_selected(hero_unit):
 	info_panel.visible = true
 	action_info_panel.visible = false
 		
-	# Who is attacking
-	var attacker = active_hero_units[current_hero_index]
-	var attackerskill = active_hero_units[current_hero_index].selectedskill
+	# Who is healing
+	var healer = active_hero_units[current_hero_index]
+	var healerskill = active_hero_units[current_hero_index].selectedskill
 	
 	# Consume mana
-	attacker.change_mana(-attackerskill.mp_cost)
+	healer.change_mana(-healerskill.mp_cost)
 	
-	# Deal damage
-	var damage = damage_formula(attacker.unit_data, hero_unit.unit_data, attackerskill)
-	hero_unit.change_health(damage)
+	# Heal value
+	var heal = damage_formula(healer.unit_data, hero_unit.unit_data, healerskill)
+	hero_unit.change_health(heal)
 	
-	main_text.text = attacker.unit_data.name + " heals for " + str(damage) + " damage!"
+	main_text.text = healer.unit_data.name + " heals for " + str(heal) + "!"
 	await get_tree().create_timer(0.5).timeout
 	
 	# Check & removes if dead
@@ -224,21 +230,27 @@ func _on_enemy_selected(enemy_unit):
 		info_panel.visible = true
 		action_info_panel.visible = false
 		
-		# Who is attacking
-		var attacker = active_hero_units[current_hero_index]
-		var attackerskill = active_hero_units[current_hero_index].selectedskill
+		if active_hero_units[current_hero_index].selected_action is SkillData:
+			# Who is attacking
+			var attacker = active_hero_units[current_hero_index]
+			var attackerskill = active_hero_units[current_hero_index].selected_action
 	
-		# Consume mana
-		attacker.change_mana(-attackerskill.mp_cost)
+			# Consume mana
+			attacker.change_mana(-attackerskill.mp_cost)
 		
-		# Deal damage
-		var damage = damage_formula(attacker.unit_data, enemy_unit.unit_data, attackerskill)
-		enemy_unit.change_health(-damage)
+			# Deal damage
+			var damage = damage_formula(attacker.unit_data, enemy_unit.unit_data, attackerskill)
+			enemy_unit.change_health(-damage)
 		
-		main_text.text = attacker.unit_data.name + " attacks for " + str(damage) + " damage!"
-		await get_tree().create_timer(0.5).timeout
+			main_text.text = attacker.unit_data.name + " attacks for " + str(damage) + " damage!"
+			await get_tree().create_timer(0.5).timeout
 		
-		# Check & removes if dead
+		elif active_hero_units[current_hero_index].selected_action is ItemData:
+			var attackeritem = active_hero_units[current_hero_index].selected_action
+			enemy_unit.change_health(-attackeritem.value)
+			main_text.text = attackeritem.name + " causes " + str(attackeritem.value) + " damage!"
+		
+		# Check and removes
 		if enemy_unit.current_hp <= 0:
 			active_enemy_units.erase(enemy_unit)
 			enemy_unit.queue_free()
@@ -308,17 +320,6 @@ func _on_item_button_pressed() -> void:
 	item_button.disabled = true
 
 func _on_item_selected(item_data: ItemData):
-	match item_data.stats:
-		0:# HP
-			active_hero_units[current_hero_index].change_health(item_data.value)
-		1:# MP
-			active_hero_units[current_hero_index].change_mana(item_data.value)
-			
-			
-	main_text.text = active_hero_units[current_hero_index].unit_data.name + " usou " + item_data.name + "!"
-	await get_tree().create_timer(1.0).timeout
-	
-	
 	# Resets action info container to party info
 	for child in action_info_container.get_children():
 		child.queue_free()
@@ -326,11 +327,48 @@ func _on_item_selected(item_data: ItemData):
 	info_panel.visible = true
 	action_info_panel.visible = false
 	
-	Player.inventory.erase(item_data)
+	match item_data.targettype:
+		0: #Single enemy
+			active_hero_units[current_hero_index].selected_action = item_data
+			is_targeting = true
+			main_text.text = "Using " + item_data.name + ". Select target"
+			return
+		
+		1: #All enemies
+			for enemy in active_enemy_units.duplicate():
+				enemy.change_health(-item_data.value)
+				
+				# Check and removes
+				if enemy.current_hp <= 0:
+					active_enemy_units.erase(enemy)
+					enemy.queue_free()
+				
+			
+			main_text.text = active_hero_units[current_hero_index].unit_data.name + " usou " + item_data.name + "!"
+			await get_tree().create_timer(2.0).timeout
+			
+			Player.inventory.erase(item_data)
+			
+			end_heroturn()
+			
+		2: #Single ally
+			pass
+		3: #All allies
+			pass
+		4: #Self
+			match item_data.stats:
+				0:# HP
+					active_hero_units[current_hero_index].change_health(item_data.value)
+					
+				1:# MP
+					active_hero_units[current_hero_index].change_mana(item_data.value)
+			main_text.text = active_hero_units[current_hero_index].unit_data.name + " usou " + item_data.name + "!"
+			await get_tree().create_timer(1.0).timeout
+			
+			end_heroturn()
+			
 	
-	active_hero_units[current_hero_index].arrow_indicator.self_modulate = Color(1, 1, 1, 0)
-	current_hero_index += 1
-	start_player_turn()
+	
 
 
 func enemy_phase():
@@ -404,3 +442,8 @@ func damage_formula(attacker: Resource, victim: Resource, skill: SkillData):
 		finaldmg = 0
 	
 	return finaldmg
+	
+func end_heroturn():
+	active_hero_units[current_hero_index].arrow_indicator.self_modulate = Color(1, 1, 1, 0)
+	current_hero_index += 1
+	start_player_turn()

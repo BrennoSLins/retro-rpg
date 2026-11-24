@@ -12,6 +12,6 @@ script = ExtResource("1_pfc8k")
 name = "Poção de HP"
 description = "Uma poção de baixa eficiencia"
 sprite = SubResource("AtlasTexture_ixfsr")
+itemtype = 1
 value = 10
-targettype = 4
 metadata/_custom_type_script = "uid://svei1ioii5yn"

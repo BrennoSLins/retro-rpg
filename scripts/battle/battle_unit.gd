@@ -3,8 +3,9 @@ extends Control
 @onready var name_label: Label = $VBoxContainer/Name
 @onready var texture: TextureRect = $VBoxContainer/UnitTexture
 @onready var arrow_indicator: TextureRect = $VBoxContainer/ArrowIndicator
-@onready var selectedskill : SkillData
+@onready var selected_action : Resource
 @onready var health_bar: TextureProgressBar = $VBoxContainer/UnitTexture/HealthBar
+@onready var health_label: Label = $VBoxContainer/UnitTexture/HealthLabel
 
 
 
@@ -32,8 +33,11 @@ func set_data(resource):
 	
 	if unit_data is EnemyData:
 		health_bar.visible = true
+		health_label.visible = true
 		health_bar.value = unit_data.basehp
 		health_bar.max_value = unit_data.basehp
+		health_label.text = str(unit_data.basehp)
+		
 	
 
 
@@ -57,6 +61,7 @@ func change_health(amount: int):
 	
 	if unit_data is EnemyData:
 		health_bar.value = current_hp
+		health_label.text = str(current_hp)
 	
 	# Hurt animation
 	var tween = create_tween()

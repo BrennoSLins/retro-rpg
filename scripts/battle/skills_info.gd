@@ -28,7 +28,7 @@ func set_data(data):
 	elif data is ItemData:
 		skill_image.texture = data.sprite
 		skill_description.text = data.description
-		var attribute_name = GameEnums.CharacterValues.keys()[data.attribute]
+		var attribute_name = GameEnums.CharacterStats.keys()[data.stats]
 		skill_name.text = data.name
 		skill_cost.text = "EFFECT: " + attribute_name + " " + str(data.value)
 		skill_data = data

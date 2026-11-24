@@ -68,7 +68,7 @@ var scenarios = [
 		"id": "c1_sticky",
 		"name": "Sticky Situation",
 		"description": "Defeat the horde of Slimes and clean the caves.",
-		"scene": "",
+		"scene": preload("uid://dquk6h3baqgxf"),
 		"image": preload("uid://decjvprr4tm06"),
 		"combatroad": preload("uid://dlukvep7f5y1m"),
 		"combatbg": preload("uid://jvlggkhjmodw"),

@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://crdivkcccx0e2"]
 
 [ext_resource type="Script" uid="uid://c5241x6fw6hpm" path="res://scripts/battle/battle_scene.gd" id="1_rca61"]
-[ext_resource type="PackedScene" uid="uid://wao8ltwmss7v" path="res://scenes/battle_unit.tscn" id="2_8qdv8"]
+[ext_resource type="PackedScene" uid="uid://wao8ltwmss7v" path="res://scenes/UI/battle_unit.tscn" id="2_8qdv8"]
 [ext_resource type="Texture2D" uid="uid://bu60c31v2icxk" path="res://assets/backgrounds/2304x1296.png" id="3_1i8jf"]
 [ext_resource type="FontFile" uid="uid://bvj13byb8di4a" path="res://fonts/PixelOperator8.ttf" id="3_pxwbd"]
-[ext_resource type="PackedScene" uid="uid://db3bvopudowj5" path="res://scenes/skills_info.tscn" id="4_0gp0h"]
+[ext_resource type="PackedScene" uid="uid://db3bvopudowj5" path="res://scenes/UI/skills_info.tscn" id="4_0gp0h"]
 [ext_resource type="Texture2D" uid="uid://bmsqu2fkyuoru" path="res://assets/backgrounds/grassroad.png" id="4_svpld"]
-[ext_resource type="PackedScene" uid="uid://lpclr0c0pp2a" path="res://scenes/battle_info.tscn" id="6_1i8jf"]
+[ext_resource type="PackedScene" uid="uid://lpclr0c0pp2a" path="res://scenes/UI/battle_info.tscn" id="6_1i8jf"]
 [ext_resource type="Texture2D" uid="uid://durgvnyaemgi5" path="res://assets/icons/skills.png" id="6_rum4d"]
 [ext_resource type="Texture2D" uid="uid://c8llf3rp8a7od" path="res://assets/icons/potions.png" id="7_3oc74"]
-[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/sunnysideworld.png" id="8_0gp0h"]
+[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/tilemaps/sunnysideworld.png" id="8_0gp0h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61ot5"]
 bg_color = Color(0.17641911, 0.17641908, 0.17641908, 1)
@@ -178,7 +178,7 @@ custom_minimum_size = Vector2(750, 0)
 custom_maximum_size = Vector2(750, -1)
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_constants/separation = 55
+theme_override_constants/separation = 5
 
 [node name="ButtonsContainer" type="PanelContainer" parent="." unique_id=511034169]
 custom_minimum_size = Vector2(0, 200)

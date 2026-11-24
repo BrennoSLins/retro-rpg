@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://wao8ltwmss7v"]
 
 [ext_resource type="Script" uid="uid://bu01udbo41oat" path="res://scripts/battle/battle_unit.gd" id="1_trae8"]
-[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/sunnysideworld.png" id="2_njnh6"]
+[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/tilemaps/sunnysideworld.png" id="2_njnh6"]
 [ext_resource type="FontFile" uid="uid://bvj13byb8di4a" path="res://fonts/PixelOperator8.ttf" id="2_p0cq7"]
 [ext_resource type="Texture2D" uid="uid://15jetgskp0pg" path="res://assets/sprites/enemies/slimepixelart.png" id="4_j6crx"]
 [ext_resource type="Texture2D" uid="uid://dijgj2qtnc261" path="res://assets/UI/UI Pixel.png" id="5_ttxbh"]
+[ext_resource type="FontFile" uid="uid://cq3r4m8de71di" path="res://fonts/PixelOperator8-Bold.ttf" id="6_xh5ij"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pohj0"]
 atlas = ExtResource("2_njnh6")
@@ -12,8 +13,10 @@ region = Rect2(624, 720, 16, 16)
 
 [sub_resource type="LabelSettings" id="LabelSettings_trae8"]
 font = ExtResource("2_p0cq7")
-outline_size = 1
+outline_size = 2
 outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_61ot5"]
 atlas = ExtResource("4_j6crx")
@@ -30,16 +33,25 @@ region = Rect2(0, 64, 16, 16)
 atlas = ExtResource("5_ttxbh")
 region = Rect2(32, 64, 16, 16)
 
+[sub_resource type="LabelSettings" id="LabelSettings_bhunq"]
+font = ExtResource("6_xh5ij")
+font_size = 12
+font_color = Color(0.8862745, 0.4, 0.35686275, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.92941177)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12j5o"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_61ot5"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dwsqi"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pohj0"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xh5ij"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ftswq"]
 
 [node name="BattleUnit" type="Control" unique_id=1447908313]
-custom_minimum_size = Vector2(32, 64)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 3
 anchor_right = 0.094000004
 anchor_bottom = 0.24100001
@@ -47,17 +59,18 @@ offset_right = -0.480011
 offset_bottom = -0.27999878
 size_flags_horizontal = 4
 size_flags_vertical = 4
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource("1_trae8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1508467811]
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/separation = 12
 alignment = 1
 
@@ -66,10 +79,12 @@ custom_minimum_size = Vector2(75, 50)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+mouse_filter = 2
 texture = SubResource("AtlasTexture_pohj0")
 stretch_mode = 6
 
 [node name="Name" type="Label" parent="VBoxContainer" unique_id=1745867288]
+z_index = 2
 custom_minimum_size = Vector2(25, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -81,6 +96,7 @@ horizontal_alignment = 1
 texture_filter = 1
 custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
+mouse_filter = 2
 texture = SubResource("AtlasTexture_61ot5")
 expand_mode = 1
 stretch_mode = 5
@@ -97,6 +113,7 @@ anchor_right = 0.9996667
 anchor_bottom = 0.82500005
 offset_top = -3.0
 offset_right = 0.05999756
+mouse_filter = 2
 value = 50.0
 fill_mode = 3
 nine_patch_stretch = true
@@ -110,8 +127,28 @@ texture_progress = SubResource("AtlasTexture_12j5o")
 tint_under = Color(0.25264242, 0.25264242, 0.25264242, 1)
 metadata/_edit_use_anchors_ = true
 
+[node name="HealthLabel" type="Label" parent="VBoxContainer/UnitTexture" unique_id=1269603612]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8055556
+anchor_top = -0.375
+anchor_right = 1.191888
+anchor_bottom = 0.23761126
+offset_right = 26.46016
+offset_bottom = -41.51335
+rotation = 0.49141705
+text = "999999"
+label_settings = SubResource("LabelSettings_bhunq")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="Button" type="Button" parent="." unique_id=993981746]
 process_mode = 3
+z_index = 2
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -119,8 +156,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_12j5o")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_61ot5")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_pohj0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dwsqi")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_xh5ij")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_ftswq")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

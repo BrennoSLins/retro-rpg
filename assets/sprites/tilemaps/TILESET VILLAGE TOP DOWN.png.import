@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci277a4p63e6q"
-path="res://.godot/imported/tilemap_packed City.png-72e9a4ce8ec068e3b706e5beb857dbc3.ctex"
+uid="uid://bdpjeub66r8hb"
+path="res://.godot/imported/TILESET VILLAGE TOP DOWN.png-72fc4fde2cb4bd46da2864fcf7027a9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilemap_packed City.png"
-dest_files=["res://.godot/imported/tilemap_packed City.png-72e9a4ce8ec068e3b706e5beb857dbc3.ctex"]
+source_file="res://assets/sprites/tilemaps/TILESET VILLAGE TOP DOWN.png"
+dest_files=["res://.godot/imported/TILESET VILLAGE TOP DOWN.png-72fc4fde2cb4bd46da2864fcf7027a9a.ctex"]
 
 [params]
 

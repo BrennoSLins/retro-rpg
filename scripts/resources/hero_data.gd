@@ -1,9 +1,11 @@
 extends Resource
 class_name HeroData
 
+@export_category("Informações")
 @export var name : String = "Hero"
 @export var sprite : Texture2D
 @export var mugshot : Texture2D
+@export_category("Atributos")
 @export var basehp : float = 0
 @export var basemp : float = 0
 @export var attributes : Dictionary = {
@@ -16,10 +18,13 @@ class_name HeroData
 }
 @export var skills : Array[SkillData] = []
 @export var level : int = 1
-@export var experience : int = 0
 
+var experience : int = 0
 var available_stat_points : int = 0
-var max_xp = 50 * (level*2)
+
+var max_xp: int:
+	get:
+		return 50 * (level * 2)
 
 func check_lvlup() -> bool:
 	if experience >= max_xp:

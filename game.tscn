@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://0hk84klss4q5" path="res://scripts/game_manager.gd" id="1_hve3p"]
 [ext_resource type="Script" uid="uid://dv0kcxwhoqdxc" path="res://scripts/autoload/signal_bus.gd" id="1_ryrav"]
-[ext_resource type="PackedScene" uid="uid://crdivkcccx0e2" path="res://scenes/battle_scene.tscn" id="2_7jktm"]
-[ext_resource type="PackedScene" uid="uid://cgatrwuk5ub7p" path="res://scenes/scene_selector.tscn" id="3_mfdv2"]
+[ext_resource type="PackedScene" uid="uid://crdivkcccx0e2" path="res://scenes/UI/battle_scene.tscn" id="2_7jktm"]
+[ext_resource type="PackedScene" uid="uid://cgatrwuk5ub7p" path="res://scenes/UI/scene_selector.tscn" id="3_mfdv2"]
 [ext_resource type="PackedScene" uid="uid://b05xiiwte62rp" path="res://scenes/maps/test_field.tscn" id="5_7jktm"]
-[ext_resource type="PackedScene" uid="uid://xj4kcm8m00ey" path="res://scenes/dialog_box.tscn" id="5_eow3j"]
+[ext_resource type="PackedScene" uid="uid://xj4kcm8m00ey" path="res://scenes/UI/dialog_box.tscn" id="5_eow3j"]
 [ext_resource type="PackedScene" uid="uid://cdjm4o5hwhokx" path="res://scenes/camp/attribute_upgrade_screen.tscn" id="6_eow3j"]
 
 [node name="Game" type="Node" unique_id=1269291675]

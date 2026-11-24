@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dqakmnav63cur"]
 
 [ext_resource type="Script" uid="uid://cduqbfw6wbge7" path="res://scripts/resources/enemy_data.gd" id="1_10tcd"]
+[ext_resource type="Script" uid="uid://svei1ioii5yn" path="res://scripts/resources/item_data.gd" id="1_sd0ex"]
 [ext_resource type="Script" uid="uid://bfl54pt607ekb" path="res://scripts/resources/skill_data.gd" id="2_mfd5x"]
 [ext_resource type="Resource" uid="uid://e8k4srjya8in" path="res://resource/skills/normalattack.tres" id="3_sd0ex"]
 [ext_resource type="Texture2D" uid="uid://15jetgskp0pg" path="res://assets/sprites/enemies/slimepixelart.png" id="4_mfd5x"]

@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 var hp: int
 var party_status : Array = []
-var inventory : Array[ItemData] = []
+@export var inventory : Array[ItemData] = []
 var gold : int = 0
 
 var can_move : bool = true
@@ -20,8 +20,7 @@ func _ready():
 	party.append(preload("uid://csg83k2bqwaot"))
 	
 	# Connect player visibility signal to function
-	SignalBus.player_visibility.connect(visible_switch)
-	SignalBus.player_teleport.connect(teleport_player)
+
 	
 	#Loop through and build active party
 	for hero in party:
@@ -48,13 +47,3 @@ func _physics_process(_delta: float) -> void:
 		velocity = direction * SPEED
 	
 	move_and_slide()
-
-func visible_switch(switch: bool):
-	match switch:
-		true:
-			self.visible = true
-		false:
-			self.visible = false
-
-func teleport_player(coords: Vector2):
-	self.global_position = coords

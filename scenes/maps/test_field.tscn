@@ -4,18 +4,19 @@
 [ext_resource type="Script" uid="uid://dmyg6q1wjue34" path="res://scripts/battle/battle_start.gd" id="1_fa7oh"]
 [ext_resource type="Script" uid="uid://cduqbfw6wbge7" path="res://scripts/resources/enemy_data.gd" id="2_wpf65"]
 [ext_resource type="Resource" uid="uid://cqru47pu6oy7p" path="res://resource/enemy/bandit.tres" id="3_ttm5a"]
-[ext_resource type="Texture2D" uid="uid://b8ntv5xgqj86v" path="res://assets/sprites/tilemap_packed Dungeon.png" id="4_jkqyg"]
+[ext_resource type="Texture2D" uid="uid://b8ntv5xgqj86v" path="res://assets/sprites/tilemaps/tilemap_packed Dungeon.png" id="4_jkqyg"]
 [ext_resource type="PackedScene" uid="uid://dmjs6xac8hsnq" path="res://scenes/interactables/interactable.tscn" id="5_4785g"]
+[ext_resource type="Resource" uid="uid://dqakmnav63cur" path="res://resource/enemy/slime.tres" id="5_xqq1b"]
 [ext_resource type="Script" uid="uid://dyrjardjn0dcl" path="res://scripts/scenario/scene_move.gd" id="7_gl7bj"]
-[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/sunnysideworld.png" id="7_h8074"]
+[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/tilemaps/sunnysideworld.png" id="7_h8074"]
 [ext_resource type="Script" uid="uid://rdh2vtkicqg2" path="res://scripts/dialog/dialog_caller.gd" id="7_o8nit"]
 [ext_resource type="Script" uid="uid://dclbuktapev3b" path="res://scripts/resources/dialog_data.gd" id="8_ecpho"]
 [ext_resource type="PackedScene" uid="uid://dquk6h3baqgxf" path="res://scenes/maps/sticky_outside.tscn" id="8_r0481"]
 [ext_resource type="Script" uid="uid://d0qawi4bn7mlx" path="res://scripts/loot_box.gd" id="11_ffxpy"]
 [ext_resource type="Script" uid="uid://svei1ioii5yn" path="res://scripts/resources/item_data.gd" id="12_gl7bj"]
 [ext_resource type="Resource" uid="uid://dwoulv3j2t3we" path="res://resource/items/health_potion.tres" id="13_r0481"]
-[ext_resource type="Resource" uid="uid://bmq6jxsfjgm13" path="res://resource/items/trash.tres" id="14_03a3d"]
-[ext_resource type="Texture2D" uid="uid://dityuxqade4nj" path="res://assets/sprites/tilemap_packed Desert.png" id="15_tvgm2"]
+[ext_resource type="Texture2D" uid="uid://dityuxqade4nj" path="res://assets/sprites/tilemaps/tilemap_packed Desert.png" id="15_tvgm2"]
+[ext_resource type="Resource" uid="uid://co0kn8fgvsjud" path="res://resource/items/combat items/bomb.tres" id="16_0yfk6"]
 [ext_resource type="PackedScene" uid="uid://be6juc3wb05ly" path="res://scenes/maps/camp.tscn" id="17_0yfk6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12j5o"]
@@ -378,7 +379,7 @@ metadata/_edit_horizontal_guides_ = [-91.0]
 z_index = 1
 position = Vector2(57, -1)
 script = ExtResource("1_fa7oh")
-enemy_data = Array[ExtResource("2_wpf65")]([ExtResource("3_ttm5a")])
+enemy_data = Array[ExtResource("2_wpf65")]([ExtResource("3_ttm5a"), ExtResource("5_xqq1b"), ExtResource("5_xqq1b")])
 
 [node name="Sprite2D" type="Sprite2D" parent="Bandit" unique_id=1679524033]
 texture = SubResource("AtlasTexture_12j5o")
@@ -399,6 +400,7 @@ z_index = 1
 position = Vector2(42, 171)
 script = ExtResource("7_gl7bj")
 scene = ExtResource("8_r0481")
+spawn = Vector2(95, 210)
 
 [node name="Sprite2D" type="Sprite2D" parent="Door" unique_id=573225276]
 texture = ExtResource("4_jkqyg")
@@ -433,7 +435,7 @@ shape = SubResource("RectangleShape2D_pohj0")
 z_index = 1
 position = Vector2(150, 80)
 script = ExtResource("11_ffxpy")
-loot_table = Array[ExtResource("12_gl7bj")]([ExtResource("13_r0481"), ExtResource("14_03a3d")])
+loot_table = Array[ExtResource("12_gl7bj")]([ExtResource("13_r0481")])
 
 [node name="Sprite2D" type="Sprite2D" parent="Chest" unique_id=482894340]
 texture = SubResource("AtlasTexture_pohj0")
@@ -441,6 +443,21 @@ texture = SubResource("AtlasTexture_pohj0")
 [node name="Interactable" parent="Chest" unique_id=1903364377 instance=ExtResource("5_4785g")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chest" unique_id=1712331643]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_ftswq")
+
+[node name="Chest2" type="StaticBody2D" parent="." unique_id=215544183]
+z_index = 1
+position = Vector2(176, 80)
+script = ExtResource("11_ffxpy")
+loot_table = Array[ExtResource("12_gl7bj")]([ExtResource("16_0yfk6")])
+
+[node name="Sprite2D" type="Sprite2D" parent="Chest2" unique_id=806781857]
+texture = SubResource("AtlasTexture_pohj0")
+
+[node name="Interactable" parent="Chest2" unique_id=2131136550 instance=ExtResource("5_4785g")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest2" unique_id=517160634]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_ftswq")
 

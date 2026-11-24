@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dolxdl11vtamt"
-path="res://.godot/imported/tilemap_packed Town.png-e20fdf12204ab600dab4dc75305c7df5.ctex"
+uid="uid://83pygf6yje6n"
+path="res://.godot/imported/sunnysideworld.png-fc938cbed7240cfdff44e4fd2a7d1c12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilemap_packed Town.png"
-dest_files=["res://.godot/imported/tilemap_packed Town.png-e20fdf12204ab600dab4dc75305c7df5.ctex"]
+source_file="res://assets/sprites/tilemaps/sunnysideworld.png"
+dest_files=["res://.godot/imported/sunnysideworld.png-fc938cbed7240cfdff44e4fd2a7d1c12.ctex"]
 
 [params]
 

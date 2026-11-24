@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ddcn2ravaen2x" path="res://assets/sprites/characters/heroes/RaphealMugshot.png" id="2_7u3dw"]
 [ext_resource type="FontFile" uid="uid://cq3r4m8de71di" path="res://fonts/PixelOperator8-Bold.ttf" id="3_rsvqu"]
 [ext_resource type="FontFile" uid="uid://bvj13byb8di4a" path="res://fonts/PixelOperator8.ttf" id="4_4jnm8"]
-[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/sunnysideworld.png" id="5_o3qah"]
+[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/tilemaps/sunnysideworld.png" id="5_o3qah"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5wjh"]
 bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
@@ -156,13 +156,12 @@ text = "+0"
 label_settings = SubResource("LabelSettings_61ot5")
 horizontal_alignment = 1
 
-[node name="StrIncreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/StrContainer" unique_id=1202000577 groups=["atrribute_up_button"]]
+[node name="StrIncreaseButt" type="Button" parent="Panel/MainContainer/AttributesContainer/StrContainer" unique_id=1202000577]
 custom_minimum_size = Vector2(282, 96)
 custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_61ot5")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -172,7 +171,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_pohj0")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -213,7 +211,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_61ot5")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -223,7 +220,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_pohj0")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -264,7 +260,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_61ot5")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -274,7 +269,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_pohj0")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -315,7 +309,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_61ot5")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -325,7 +318,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_pohj0")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -366,7 +358,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_61ot5")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -376,7 +367,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_pohj0")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -417,7 +407,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_61ot5")
-flat = true
 icon_alignment = 1
 expand_icon = true
 
@@ -427,7 +416,6 @@ custom_maximum_size = Vector2(282, 96)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = SubResource("AtlasTexture_pohj0")
-flat = true
 icon_alignment = 1
 expand_icon = true
 

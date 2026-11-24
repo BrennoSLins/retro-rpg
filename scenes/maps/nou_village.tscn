@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://crnuuong7does"]
 
 [ext_resource type="Script" uid="uid://bk1q33vjbkiev" path="res://scripts/overworld.gd" id="1_1ssm7"]
-[ext_resource type="Texture2D" uid="uid://dolxdl11vtamt" path="res://assets/sprites/tilemap_packed Town.png" id="1_plkt5"]
-[ext_resource type="Texture2D" uid="uid://4l72vaqkbswl" path="res://assets/sprites/farm packed.png" id="2_1ssm7"]
+[ext_resource type="Texture2D" uid="uid://dolxdl11vtamt" path="res://assets/sprites/tilemaps/tilemap_packed Town.png" id="1_plkt5"]
+[ext_resource type="Texture2D" uid="uid://4l72vaqkbswl" path="res://assets/sprites/tilemaps/farm packed.png" id="2_1ssm7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bigvg"]
 texture = ExtResource("1_plkt5")

@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://tmqjg5cl6cac"]
 
-[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/sunnysideworld.png" id="1_4y06f"]
-[ext_resource type="Texture2D" uid="uid://bgfx3e8rdsl5g" path="res://assets/sprites/tilemap Farm.png" id="2_kwl03"]
-[ext_resource type="Texture2D" uid="uid://c1oorhn263idc" path="res://assets/sprites/tilemap Tiny Battle.png" id="3_65dpx"]
-[ext_resource type="Texture2D" uid="uid://ci277a4p63e6q" path="res://assets/sprites/tilemap_packed City.png" id="4_s682h"]
-[ext_resource type="Texture2D" uid="uid://dityuxqade4nj" path="res://assets/sprites/tilemap_packed Desert.png" id="5_ouvb0"]
-[ext_resource type="Texture2D" uid="uid://b8ntv5xgqj86v" path="res://assets/sprites/tilemap_packed Dungeon.png" id="6_yu01u"]
-[ext_resource type="Texture2D" uid="uid://bqvr8666tyhjj" path="res://assets/sprites/tilemap_packed Factory.png" id="7_1k46e"]
-[ext_resource type="Texture2D" uid="uid://dolxdl11vtamt" path="res://assets/sprites/tilemap_packed Town.png" id="8_vdp5u"]
+[ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/tilemaps/sunnysideworld.png" id="1_4y06f"]
+[ext_resource type="Texture2D" uid="uid://bgfx3e8rdsl5g" path="res://assets/sprites/tilemaps/tilemap Farm.png" id="2_kwl03"]
+[ext_resource type="Texture2D" uid="uid://c1oorhn263idc" path="res://assets/sprites/tilemaps/tilemap Tiny Battle.png" id="3_65dpx"]
+[ext_resource type="Texture2D" uid="uid://ci277a4p63e6q" path="res://assets/sprites/tilemaps/tilemap_packed City.png" id="4_s682h"]
+[ext_resource type="Texture2D" uid="uid://dityuxqade4nj" path="res://assets/sprites/tilemaps/tilemap_packed Desert.png" id="5_ouvb0"]
+[ext_resource type="Texture2D" uid="uid://b8ntv5xgqj86v" path="res://assets/sprites/tilemaps/tilemap_packed Dungeon.png" id="6_yu01u"]
+[ext_resource type="Texture2D" uid="uid://bqvr8666tyhjj" path="res://assets/sprites/tilemaps/tilemap_packed Factory.png" id="7_1k46e"]
+[ext_resource type="Texture2D" uid="uid://dolxdl11vtamt" path="res://assets/sprites/tilemaps/tilemap_packed Town.png" id="8_vdp5u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l7ee2"]
 texture = ExtResource("1_4y06f")

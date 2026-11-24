@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b85rr6scifnfm"
-path="res://.godot/imported/pixel_style4.png-bf1253b80105491c6ed43f75d0bf0855.ctex"
+uid="uid://dityuxqade4nj"
+path="res://.godot/imported/tilemap_packed Desert.png-64ec53075ffb53883b38a8708285694c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/pixel_style4.png"
-dest_files=["res://.godot/imported/pixel_style4.png-bf1253b80105491c6ed43f75d0bf0855.ctex"]
+source_file="res://assets/sprites/tilemaps/tilemap_packed Desert.png"
+dest_files=["res://.godot/imported/tilemap_packed Desert.png-64ec53075ffb53883b38a8708285694c.ctex"]
 
 [params]
 
