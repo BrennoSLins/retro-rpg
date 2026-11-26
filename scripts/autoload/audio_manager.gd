@@ -78,7 +78,7 @@ func load_audio(path: String, target_dict: Dictionary):
 			var audio_name = file_name.get_basename()
 			target_dict[audio_name] = audio
 		
-			print("Carregado: ", audio_name)
+			
 
 #OLD: func load_audio(path: String, target_dict: Dictionary):
 	#var dir = DirAccess.open(path)

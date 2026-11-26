@@ -26,7 +26,7 @@ func _on_interact():
 	world.add_child(new_world)
 	
 	# Teleports player to map spawn vector
-	SignalBus.player_teleport.emit(spawn)
+	Player.global_position = spawn
 
 func route_confirmed(data: Dictionary):
 	var newscene = data["scene"]

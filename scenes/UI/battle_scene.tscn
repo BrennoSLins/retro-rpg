@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://durgvnyaemgi5" path="res://assets/icons/skills.png" id="6_rum4d"]
 [ext_resource type="Texture2D" uid="uid://c8llf3rp8a7od" path="res://assets/icons/potions.png" id="7_3oc74"]
 [ext_resource type="Texture2D" uid="uid://83pygf6yje6n" path="res://assets/sprites/tilemaps/sunnysideworld.png" id="8_0gp0h"]
+[ext_resource type="Theme" uid="uid://pgl81eybowfs" path="res://button_theme.tres" id="8_i0p4c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61ot5"]
 bg_color = Color(0.17641911, 0.17641908, 0.17641908, 1)
@@ -207,6 +208,9 @@ custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_next = NodePath("../GuardButton")
+focus_previous = NodePath("../RunButton")
+theme = ExtResource("8_i0p4c")
 text = "Attack
 "
 icon = SubResource("AtlasTexture_pxwbd")
@@ -217,6 +221,9 @@ custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_next = NodePath("../FocusButton")
+focus_previous = NodePath("../AttackButton")
+theme = ExtResource("8_i0p4c")
 text = "Guard"
 icon = SubResource("AtlasTexture_1i8jf")
 expand_icon = true
@@ -226,6 +233,9 @@ custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_next = NodePath("../ItemButton")
+focus_previous = NodePath("../GuardButton")
+theme = ExtResource("8_i0p4c")
 text = "Focus"
 icon = SubResource("AtlasTexture_svpld")
 expand_icon = true
@@ -235,6 +245,9 @@ custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_neighbor_bottom = NodePath("../FocusButton")
+focus_next = NodePath("../RunButton")
+theme = ExtResource("8_i0p4c")
 text = "Items"
 icon = SubResource("AtlasTexture_rum4d")
 expand_icon = true
@@ -245,6 +258,9 @@ custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_next = NodePath("../AttackButton")
+focus_previous = NodePath("../ItemButton")
+theme = ExtResource("8_i0p4c")
 text = "Run"
 icon = SubResource("AtlasTexture_3oc74")
 expand_icon = true

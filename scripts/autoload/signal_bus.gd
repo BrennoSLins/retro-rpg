@@ -20,12 +20,6 @@ signal scenario_screen()
 signal scenario_confirmed(scenario_data)
 
 @warning_ignore('unused_signal')
-signal player_visibility(switch: bool)
-
-@warning_ignore('unused_signal')
-signal player_teleport(coords: Vector2)
-
-@warning_ignore('unused_signal')
 signal dialog_call(data: Array[DialogData])
 
 @warning_ignore('unused_signal')

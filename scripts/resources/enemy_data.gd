@@ -21,6 +21,7 @@ class_name EnemyData
 
 @export_category("Loot Drop")
 @export var loot : Array[ItemData]
+
 @export_group("Valores de gold")
 @export var mingold : int = 0
 @export var maxgold : int = 10

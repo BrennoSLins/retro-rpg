@@ -5,6 +5,7 @@ class_name HeroData
 @export var name : String = "Hero"
 @export var sprite : Texture2D
 @export var mugshot : Texture2D
+
 @export_category("Atributos")
 @export var basehp : float = 0
 @export var basemp : float = 0
@@ -30,10 +31,10 @@ func check_lvlup() -> bool:
 	if experience >= max_xp:
 		experience -= max_xp
 		level += 1
+		available_stat_points += 2
 		return true
 	else:
 		return false
-
 
 
 func change_attribute(att: GameEnums.CharacterAttributes, amount: int):

@@ -1,6 +1,7 @@
 extends Node
 
 #The Blueprints
+@export_group("Packed Scenes")
 @export var battle_scene : PackedScene
 @export var selector_scene : PackedScene
 @export var dialog_scene : PackedScene
